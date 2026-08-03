@@ -3,6 +3,17 @@ document.querySelectorAll('.nav-links a').forEach(button => {
     button.addEventListener('click', (event) => {
         document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
         event.target.classList.add('active');
+
+        // Close mobile nav after clicking a link
+        const nav = document.getElementById('mainNav');
+        const hamburger = document.getElementById('hamburgerBtn');
+        if (nav && nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            if (hamburger) {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        }
     });
 });
 
@@ -15,6 +26,37 @@ window.addEventListener('load', () => {
             link.classList.add('active');
         }
     });
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburgerBtn');
+    const nav = document.getElementById('mainNav');
+
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            hamburger.classList.toggle('active', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('open')) {
+                nav.classList.remove('open');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && nav.classList.contains('open')) {
+                nav.classList.remove('open');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.focus();
+            }
+        });
+    }
 });
 const canvas = document.getElementById("backgroundCanvas");
 const ctx = canvas.getContext("2d");

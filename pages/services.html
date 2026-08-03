@@ -6,6 +6,7 @@
     <title>Service page</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../styles/services.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
     <canvas id="backgroundCanvas"></canvas>
@@ -17,9 +18,14 @@
                 <input type="file" id="imageInput" accept="image/*" style="display: none;"> -->
             </div>
             <h1>Noushad's Portfolio</h1>
-            
+
         </div>
-        <nav>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="mainNav">
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>

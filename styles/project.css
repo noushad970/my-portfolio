@@ -14,6 +14,8 @@
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     animation: slideInUp 0.8s ease-out backwards;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #fff;
 }
 
 .project-section::before {
@@ -30,92 +32,106 @@
     opacity: 1;
 }
 
-/* Project 1 Section */
-.project-section:nth-child(1) {
-    animation-delay: 0.2s;
+/* Game Projects - unique gradients per project using class names */
+.project-section.game-1 {
     background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    color: #222;
 }
 
-.project-section:nth-child(1):hover {
+.project-section.game-1:hover {
     transform: translateY(-10px) rotate(1deg) scale(1.02);
     box-shadow: 0 15px 40px rgba(255, 175, 189, 0.4);
 }
 
-/* Project 2 Section */
-.project-section:nth-child(2) {
-    animation-delay: 0.4s;
+.project-section.game-2 {
     background: linear-gradient(135deg, #c9ffbf, #ffafbd);
+    color: #222;
 }
 
-.project-section:nth-child(2):hover {
+.project-section.game-2:hover {
     transform: translateY(-10px) rotate(-1deg) scale(1.02);
     box-shadow: 0 15px 40px rgba(201, 255, 191, 0.4);
 }
 
-/* Project 3 Section */
-.project-section:nth-child(3) {
-    animation-delay: 0.6s;
+.project-section.game-3 {
     background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    color: #222;
 }
 
-.project-section:nth-child(3):hover {
+.project-section.game-3:hover {
     transform: translateY(-10px) rotate(1deg) scale(1.02);
     box-shadow: 0 15px 40px rgba(161, 196, 253, 0.4);
 }
 
-/* Project 4 Section */
-.project-section:nth-child(4) {
-    animation-delay: 0.8s;
+.project-section.game-4 {
     background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    color: #222;
 }
 
-.project-section:nth-child(4):hover {
+.project-section.game-4:hover {
     transform: translateY(-10px) rotate(-1deg) scale(1.02);
     box-shadow: 0 15px 40px rgba(212, 252, 121, 0.4);
 }
 
-/* Project 5 Section */
-.project-section:nth-child(5) {
-    animation-delay: 1s;
+.project-section.game-5 {
     background: linear-gradient(135deg, #ffa751, #ffe259);
+    color: #222;
 }
 
-.project-section:nth-child(5):hover {
+.project-section.game-5:hover {
     transform: translateY(-10px) rotate(1deg) scale(1.02);
     box-shadow: 0 15px 40px rgba(255, 167, 81, 0.4);
 }
 
-/* Project 6 Section */
-.project-section:nth-child(6) {
-    animation-delay: 1.2s;
+.project-section.game-6 {
     background: linear-gradient(135deg, #ff6b9d, #c06c84);
+    color: #fff;
 }
 
-.project-section:nth-child(6):hover {
+.project-section.game-6:hover {
     transform: translateY(-10px) rotate(-1deg) scale(1.02);
     box-shadow: 0 15px 40px rgba(255, 107, 157, 0.4);
 }
 
-/* Project 7 Section */
-.project-section:nth-child(7) {
-    animation-delay: 1.4s;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+.project-section.game-7 {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: #fff;
 }
 
-.project-section:nth-child(7):hover {
+.project-section.game-7:hover {
     transform: translateY(-10px) rotate(1deg) scale(1.02);
+    box-shadow: 0 15px 40px rgba(56, 239, 125, 0.4);
+}
+
+/* App Projects */
+.project-section.app-1 {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+}
+
+.project-section.app-1:hover {
+    transform: translateY(-10px) rotate(-1deg) scale(1.02);
     box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
 }
 
-/* Project 8 Section */
-.project-section:nth-child(8) {
-    animation-delay: 1.6s;
+.project-section.app-2 {
     background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: #fff;
 }
 
-.project-section:nth-child(8):hover {
-    transform: translateY(-10px) rotate(-1deg) scale(1.02);
+.project-section.app-2:hover {
+    transform: translateY(-10px) rotate(1deg) scale(1.02);
     box-shadow: 0 15px 40px rgba(245, 87, 108, 0.4);
+}
+
+.project-section.app-3 {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+
+.project-section.app-3:hover {
+    transform: translateY(-10px) rotate(-1deg) scale(1.02);
+    box-shadow: 0 15px 40px rgba(32, 58, 67, 0.6);
 }
 
 /* Video Container */
@@ -150,16 +166,36 @@
 .description h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #333;
     font-weight: 700;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.project-section.game-1 .description h2,
+.project-section.game-2 .description h2,
+.project-section.game-3 .description h2,
+.project-section.game-4 .description h2,
+.project-section.game-5 .description h2 {
+    color: #222;
+}
+
+.project-section.game-6 .description h2,
+.project-section.game-7 .description h2,
+.project-section.app-1 .description h2,
+.project-section.app-2 .description h2,
+.project-section.app-3 .description h2 {
+    color: #fff;
 }
 
 .description p {
     line-height: 1.8;
     margin: 8px 0;
-    color: #444;
+    color: inherit;
     transition: all 0.3s ease;
+}
+
+.description ul {
+    margin-left: 20px;
+    color: inherit;
 }
 
 .description a {
@@ -170,6 +206,15 @@
     position: relative;
 }
 
+/* White-ish text for dark-gradient sections */
+.project-section.game-6 .description a,
+.project-section.game-7 .description a,
+.project-section.app-1 .description a,
+.project-section.app-2 .description a,
+.project-section.app-3 .description a {
+    color: #ffe259;
+}
+
 .description a::after {
     content: '';
     position: absolute;
@@ -177,7 +222,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #0066cc, #0052a3);
+    background: currentColor;
     transition: width 0.3s ease;
 }
 
@@ -186,7 +231,7 @@
 }
 
 .description a:hover {
-    color: #0052a3;
+    filter: brightness(1.1);
 }
 
 /* Animations */
@@ -212,7 +257,9 @@
     }
 }
 
-/* Add a subtle shadow effect for all sections */
+/* Subtle hover shadow for all sections */
 .project-section:hover {
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsive: handled in styles/responsive.css */

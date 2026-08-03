@@ -6,6 +6,7 @@
     <title>Project Page</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../styles/project.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
     <canvas id="backgroundCanvas"></canvas>
@@ -17,9 +18,14 @@
                 <input type="file" id="imageInput" accept="image/*" style="display: none;"> -->
             </div>
             <h1>Noushad's Portfolio</h1>
-            
+
         </div>
-        <nav>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="mainNav">
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -35,9 +41,9 @@
     <main>
     <h1 style="color: white; text-align: center; animation: fadeInUp 0.8s ease-out; margin-bottom: 40px;">🎮 Game Development Projects</h1>
         <!-- Project 1 -->
-        <section class="project-section">
+        <section class="project-section game-1">
             <div class="video-container">
-                <iframe src="https://youtube.com/embed/3WB913qvCvE?si=_zFBAmqRFGC6OmrA" 
+                <iframe src="https://youtube.com/embed/3WB913qvCvE?si=_zFBAmqRFGC6OmrA"
                         title="Project 1: GTA 5 Clone" allowfullscreen></iframe>
             </div>
             <div class="description">
@@ -48,9 +54,9 @@
         </section>
 
         <!-- Project 2 -->
-        <section class="project-section">
+        <section class="project-section game-2">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/1Yl0Kg2U8dw?si=tbjC9VERR4kEXJFu" 
+                <iframe src="https://www.youtube.com/embed/1Yl0Kg2U8dw?si=tbjC9VERR4kEXJFu"
                         title="Project 2: Zone IO" allowfullscreen></iframe>
             </div>
             <div class="description">
@@ -62,9 +68,9 @@
         </section>
 
         <!-- Project 3 -->
-        <section class="project-section">
+        <section class="project-section game-3">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/2STopauylVM?si=QgH9GoHAuTAi4tjs" 
+                <iframe src="https://www.youtube.com/embed/2STopauylVM?si=QgH9GoHAuTAi4tjs"
                         title="Project 3: Spring of the Nile" allowfullscreen></iframe>
             </div>
             <div class="description">
@@ -76,9 +82,9 @@
         </section>
 
         <!-- Project 4 -->
-        <section class="project-section">
+        <section class="project-section game-4">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/vUstjQfyr68?si=QhnuWGXBGV9ThI--" 
+                <iframe src="https://www.youtube.com/embed/vUstjQfyr68?si=QhnuWGXBGV9ThI--"
                         title="Project 4: Endless Runner" allowfullscreen></iframe>
             </div>
             <div class="description">
@@ -89,9 +95,9 @@
             </div>
         </section>
 
-        <section class="project-section">
+        <section class="project-section game-5">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/T_CMgslo7O4?si=kk94H9xGHne3PeoA" 
+                <iframe src="https://www.youtube.com/embed/T_CMgslo7O4?si=kk94H9xGHne3PeoA"
                         title="Project 5: Villagers Day" allowfullscreen></iframe>
             </div>
             <div class="description">
@@ -103,9 +109,9 @@
         </section>
 
         <!-- Project 6 -->
-        <section class="project-section">
+        <section class="project-section game-6">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/PiItKySEFdc?si=nMZtr3A80bpLeOX4" 
+                <iframe src="https://www.youtube.com/embed/PiItKySEFdc?si=nMZtr3A80bpLeOX4"
                         title="Project 6: Zombie Zone" allowfullscreen></iframe>
             </div>
             <div class="description">
@@ -116,11 +122,27 @@
             </div>
         </section>
 
+        <!-- Project 7 (NEW) -->
+        <section class="project-section game-7">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/khuKnH0-XU0?si=jcp6GOd6PSQpSt0s"
+                        title="Project 7: Fight For Survive" allowfullscreen></iframe>
+            </div>
+            <div class="description">
+                <h2>🧟‍♂️ Project 7: Fight For Survive by Unity</h2>
+                <p><strong>Role:</strong> Game Developer</p>
+                <p>Developed a multiplayer zombie survival web game using Unity, Photon PUN 2, and PlayFab. Players can team up in real-time, survive zombie waves, defeat a powerful boss, earn rewards, and compete on individual kill counts. The project features synchronized multiplayer gameplay, weapon switching, AI enemies, player progression, and persistent cloud data.</p>
+                <a href="https://noushad970.itch.io/fight-for-survive" target="_blank">🎮 Play on itch.io</a><br>
+                <a href="https://lnkd.in/gs3H-zh9" target="_blank">💻 View Source on GitHub</a>
+                <p style="font-size: 0.85rem; opacity: 0.85; margin-top: 8px;"><em>⚠️ Note: 2D/3D models not included in the repository due to their large size.</em></p>
+            </div>
+        </section>
+
     <h1 style="color: white; text-align: center; animation: fadeInUp 0.8s ease-out; margin: 40px 0;">📱 App Development Projects</h1>
         <!-- Project 7 -->
-        <section class="project-section" style="background-color: blanchedalmond;">
+        <section class="project-section app-1">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/-KwJYUODTMo?si=9ygXBkNIbKKE4217" 
+                <iframe src="https://www.youtube.com/embed/-KwJYUODTMo?si=9ygXBkNIbKKE4217"
                         title="Project 7: Employee Management" allowfullscreen></iframe>
             </div>
             <div class="description">
@@ -130,9 +152,9 @@
             </div>
         </section>
 
-        <section class="project-section" style="background-color: rgb(57, 156, 163);">
+        <section class="project-section app-2">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/WOHOzqiQNRE?si=X8zIG8-ygxtH6F8d" 
+                <iframe src="https://www.youtube.com/embed/WOHOzqiQNRE?si=X8zIG8-ygxtH6F8d"
                         title="Project 8: Smart Attendance" allowfullscreen></iframe>
             </div>
             <div class="description">
@@ -142,7 +164,34 @@
                 <a href="https://play.google.com/store/apps/details?id=com.nsdtechnologies.attendancetoday" target="_blank">📱 View app on Playstore</a>
             </div>
         </section>
-        
+
+        <!-- Project 9 (NEW) -->
+        <section class="project-section app-3">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/qphcCw2_zfc?si=ZK0QWRWwq68r7Xvc"
+                        title="Project 9: Drone Simulation" allowfullscreen></iframe>
+            </div>
+            <div class="description">
+                <h2>🚁 Project 9: Drone Simulation Project by Flutter</h2>
+                <p><strong>Role:</strong> Flutter App Developer</p>
+                <p>A fully offline simulation of a modern drone logistics system, demonstrating how commercial drone deliveries could work through an interactive and animated user experience.</p>
+                <p><strong>✨ Key Features:</strong></p>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>🎨 Modern dashboard UI with dark theme and smooth animations</li>
+                    <li>🗺️ Custom city map with interactive delivery locations</li>
+                    <li>🚁 Animated drone simulation (takeoff, flight, delivery, return)</li>
+                    <li>📦 Package selection (Food, Medicine, Parcel, Documents)</li>
+                    <li>🔋 Battery monitoring and delivery progress tracking</li>
+                    <li>💰 Delivery cost and time calculation</li>
+                    <li>📊 Statistics dashboard with charts</li>
+                    <li>💾 Fully offline using local storage (SharedPreferences)</li>
+                    <li>🧩 Built with clean architecture and Riverpod</li>
+                </ul>
+                <p style="margin-top: 10px;"><strong>Tech Stack:</strong> Flutter • Dart • Riverpod • SharedPreferences • fl_chart</p>
+                <a href="https://lnkd.in/gZ9Rm_ed" target="_blank">💻 View Source on GitHub</a>
+            </div>
+        </section>
+
         <section class="profile-section1">
             <h2 style="color:rgb(0, 0, 0)">💼 Hire Me on Freelance Platforms</h2>
             <p style="color:rgb(0, 0, 0)">Check out my PeoplePerHour and Upwork profiles to hire me for your projects:</p>

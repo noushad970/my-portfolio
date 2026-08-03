@@ -1,0 +1,476 @@
+/* =========================================
+   GLOBAL RESPONSIVE STYLES
+   Breakpoints:
+     - 1600px+ (very large screens)
+     - 1200px (large desktops -> laptop)
+     - 992px (laptop -> tablet landscape)
+     - 768px (tablet -> mobile landscape)
+     - 600px (large mobile)
+     - 400px (small mobile)
+   ========================================= */
+
+/* ---------- Default: hamburger hidden (desktop) ---------- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.hamburger:hover {
+    background: rgba(230, 126, 34, 0.15);
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: linear-gradient(90deg, #e67e22, #f1c40f);
+    border-radius: 3px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ---------- Very large screens (>= 1600px) ---------- */
+@media (min-width: 1600px) {
+    .content-containerMain {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    .project-section {
+        max-width: 1400px;
+    }
+
+    .profile-pictureMain {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+/* ---------- Large screens (<= 1200px) ---------- */
+@media (max-width: 1200px) {
+    header {
+        padding: 18px 30px;
+    }
+
+    .logo h1 {
+        font-size: 26px;
+        letter-spacing: 1.5px;
+    }
+
+    .content-containerMain {
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .profile-pictureMain {
+        width: 300px;
+        height: 300px;
+    }
+
+    .skills-list li {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .project-section {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .video-container {
+        min-width: 320px;
+    }
+
+    .video-container iframe {
+        height: 240px;
+    }
+
+    .edu-image {
+        width: 360px;
+        height: 240px;
+    }
+}
+
+/* ---------- Tablets / small laptops (<= 992px) ---------- */
+@media (max-width: 992px) {
+    .content-containerMain {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-side,
+    .right-side {
+        flex: none;
+        width: 100%;
+    }
+
+    .skills-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-list li {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .project-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .video-container {
+        min-width: 0;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .video-container iframe {
+        height: 280px;
+    }
+
+    .education-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .edu-image {
+        width: 100%;
+        max-width: 500px;
+        height: 250px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .social-media {
+        top: 150px;
+        right: 10px;
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* ---------- Mobile landscape / tablets (<= 768px) ---------- */
+@media (max-width: 768px) {
+    header {
+        padding: 14px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .profile-picture {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hamburger {
+        display: flex;
+        order: 3;
+    }
+
+    nav {
+        order: 4;
+        width: 100%;
+        flex-basis: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    nav.open {
+        max-height: 500px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+        background: linear-gradient(135deg, rgba(26, 35, 50, 0.98), rgba(44, 62, 80, 0.98));
+        border-radius: 10px;
+        padding: 10px 0;
+        margin-top: 10px;
+        border: 1px solid rgba(230, 126, 34, 0.3);
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 20px;
+        text-align: center;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .nav-links a:hover {
+        transform: none;
+        background: rgba(230, 126, 34, 0.2);
+    }
+
+    .content-containerMain {
+        padding: 20px 15px;
+        gap: 25px;
+    }
+
+    .profile-pictureMain {
+        width: 220px;
+        height: 220px;
+        border-width: 5px;
+    }
+
+    .right-side h1 {
+        font-size: 1.6rem;
+    }
+
+    .right-side h3 {
+        font-size: 1.1rem;
+    }
+
+    .skills-list li {
+        height: 50px;
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .skill-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .popup-container {
+        padding: 15px;
+        max-width: 90vw;
+    }
+
+    .popup-container img {
+        max-width: 80vw;
+        max-height: 60vh;
+    }
+
+    .project-section {
+        margin: 30px auto;
+        padding: 20px 15px;
+    }
+
+    .video-container iframe {
+        height: 220px;
+    }
+
+    .description h2 {
+        font-size: 1.4rem;
+    }
+
+    .description p {
+        font-size: 0.95rem;
+    }
+
+    .education-section {
+        padding: 15px;
+    }
+
+    .edu-image {
+        height: 200px;
+    }
+
+    .contact-container {
+        width: 92%;
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .profile-section,
+    .profile-section1 {
+        padding: 25px 15px;
+        margin: 25px auto;
+    }
+
+    .profile-link {
+        padding: 10px 18px;
+        margin: 6px;
+        font-size: 14px;
+    }
+
+    main h1 {
+        font-size: 1.6rem !important;
+        margin-bottom: 25px !important;
+    }
+
+    .social-media {
+        display: none;
+    }
+}
+
+/* ---------- Large mobile (<= 600px) ---------- */
+@media (max-width: 600px) {
+    header {
+        padding: 12px 15px;
+    }
+
+    .logo h1 {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .profile-picture {
+        width: 36px;
+        height: 36px;
+        border-width: 2px;
+    }
+
+    .profile-pictureMain {
+        width: 180px;
+        height: 180px;
+        border-width: 4px;
+    }
+
+    .content-containerMain {
+        padding: 15px 10px;
+    }
+
+    .skills-list li {
+        font-size: 13px;
+        padding: 8px 10px;
+        height: 46px;
+    }
+
+    .skill-logo {
+        width: 26px;
+        height: 26px;
+        margin-right: 8px;
+    }
+
+    .video-container iframe {
+        height: 200px;
+    }
+
+    .edu-image {
+        height: 180px;
+    }
+
+    .description h2 {
+        font-size: 1.2rem;
+    }
+
+    .description p {
+        font-size: 0.9rem;
+    }
+
+    .profile-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .profile-link {
+        width: 100%;
+        max-width: 280px;
+        margin: 0;
+    }
+}
+
+/* ---------- Very small mobile (<= 400px) ---------- */
+@media (max-width: 400px) {
+    .logo h1 {
+        font-size: 14px;
+    }
+
+    .profile-pictureMain {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-list li {
+        font-size: 12px;
+        height: 42px;
+    }
+
+    .video-container iframe {
+        height: 180px;
+    }
+
+    main h1 {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* ---------- Landscape orientation on short mobile screens ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+    .profile-pictureMain {
+        width: 150px;
+        height: 150px;
+    }
+
+    .video-container iframe {
+        height: 180px;
+    }
+}
+
+/* ---------- Reduce motion for accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ---------- Touch device optimizations ---------- */
+@media (hover: none) and (pointer: coarse) {
+    .skills-list li:hover {
+        transform: none;
+    }
+
+    .project-section:hover {
+        transform: none;
+    }
+
+    .social-icon:hover {
+        transform: none;
+    }
+}
