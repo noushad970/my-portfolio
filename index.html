@@ -88,11 +88,24 @@
 
     <!-- 3: PROJECTS -->
     <section class="panel" id="panel-3" aria-label="Projects">
-        <div class="panel-head"><h2>🎮 Projects</h2><p>Drag to spin the ring · click a card to open it</p></div>
+        <div class="panel-head"><h2>🎮 Projects</h2><p>Drag to spin a ring · click a card to open it</p></div>
         <div class="proj-controls ui">
-            <button class="round" id="prevProj" aria-label="Previous project">‹</button>
-            <div class="proj-meta"><strong id="projTitle">…</strong><span id="projCount"></span></div>
-            <button class="round" id="nextProj" aria-label="Next project">›</button>
+            <div class="ring-ctrl">
+                <div class="ring-label">🎮 Games</div>
+                <div class="ctrl-row">
+                    <button class="round" id="prevGame" aria-label="Previous game">‹</button>
+                    <div class="proj-meta"><strong id="gameTitle">…</strong><span id="gameCount"></span></div>
+                    <button class="round" id="nextGame" aria-label="Next game">›</button>
+                </div>
+            </div>
+            <div class="ring-ctrl">
+                <div class="ring-label">📱 Apps</div>
+                <div class="ctrl-row">
+                    <button class="round" id="prevApp" aria-label="Previous app">‹</button>
+                    <div class="proj-meta"><strong id="appTitle">…</strong><span id="appCount"></span></div>
+                    <button class="round" id="nextApp" aria-label="Next app">›</button>
+                </div>
+            </div>
         </div>
     </section>
 

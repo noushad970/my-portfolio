@@ -29,47 +29,56 @@ const SERVICES = [
 
 const YT = id => `https://www.youtube.com/embed/${id}?rel=0`;
 const PROJECTS = [
-    { emoji: '🚗', title: 'GTA 5 Clone by Unity', role: 'Frontend & Backend Developer', colors: ['#ffafbd', '#ffc3a0'], video: YT('3WB913qvCvE'),
+    { emoji: '🚗', kind: 'game', title: 'GTA 5 Clone by Unity', role: 'Frontend & Backend Developer', colors: ['#ffafbd', '#ffc3a0'], video: YT('3WB913qvCvE'),
       short: 'Gameplay mechanics, ads integration and cloud save in a Unity open-world clone.',
       desc: ['This is a Unity game where I developed the gameplay mechanics, added ads integration, and implemented cloud save functionality.'], links: [] },
-    { emoji: '🎯', title: 'Zone IO by Unity', role: 'Full Stack Developer', colors: ['#c9ffbf', '#ffafbd'], video: YT('1Yl0Kg2U8dw'),
+    { emoji: '🎯', kind: 'game', title: 'Zone IO by Unity', role: 'Full Stack Developer', colors: ['#c9ffbf', '#ffafbd'], video: YT('1Yl0Kg2U8dw'),
       short: 'Android game: eliminate AI players and grow your territory. Shop, mystery boxes, IAP.',
       desc: ['Zone IO is an Android game where you eliminate AI players and increase player territory. Features complex menu UI, character buying, item unlocking, mystery boxes, coin/gem purchases, and IAP integration.'],
       links: [['📱 View app on Playstore', 'https://play.google.com/store/apps/details?id=com.nsdtechnologies.AreaClash']] },
-    { emoji: '🏊', title: 'Spring of the Nile by Unity', role: 'Full Stack Game Developer', colors: ['#a1c4fd', '#c2e9fb'], video: YT('2STopauylVM'),
+    { emoji: '🏊', kind: 'game', title: 'Spring of the Nile by Unity', role: 'Full Stack Game Developer', colors: ['#a1c4fd', '#c2e9fb'], video: YT('2STopauylVM'),
       short: 'Endless swimming game: collect items, drive boats, fish and fight enemies.',
       desc: ['An endless swimming game where players swim in a river, collect items, drive boats, fish, fight enemies, and collect resources for shopping. Features obstacles to navigate and power-ups to discover.'],
       links: [['📱 View app on Playstore', 'https://play.google.com/store/apps/details?id=com.DefaultCompany.SpringNofTheNile']] },
-    { emoji: '🏃', title: 'Endless Runner by Unity', role: 'Game Developer', colors: ['#d4fc79', '#96e6a1'], video: YT('vUstjQfyr68'),
+    { emoji: '🏃', kind: 'game', title: 'Endless Runner by Unity', role: 'Game Developer', colors: ['#d4fc79', '#96e6a1'], video: YT('vUstjQfyr68'),
       short: 'Subway-Surfer-style runner with characters, maps, magnets, 2x scores and upgrades.',
       desc: ['An Endless Runner game like Subway Surfer with multiple characters, maps, coin collection, magnet power-ups, 2x score multipliers, and an upgrade system.'],
       links: [['📱 View app on Playstore', 'https://play.google.com/store/apps/details?id=com.NsdTechnologies.DashForCoins']] },
-    { emoji: '🌾', title: 'Villagers Day Farming Game', role: 'Game Developer', colors: ['#ffa751', '#ffe259'], video: YT('T_CMgslo7O4'),
+    { emoji: '🌾', kind: 'game', title: 'Villagers Day Farming Game', role: 'Game Developer', colors: ['#ffa751', '#ffe259'], video: YT('T_CMgslo7O4'),
       short: 'Farming sim: grow crops, raise animals, build farms, quests and seasonal events.',
       desc: ['A farming simulation game where players can grow crops, raise animals, build farms, interact with NPCs, complete quests, and participate in seasonal events.'],
       links: [['🎮 Play on WebGL mode', 'https://noushad970.itch.io/villagers-day']] },
-    { emoji: '🧟', title: 'Zombie Zone: 2D Zombie Game', role: 'Game Developer', colors: ['#ff6b9d', '#c06c84'], video: YT('PiItKySEFdc'),
+    { emoji: '🧟', kind: 'game', title: 'Zombie Zone: 2D Zombie Game', role: 'Game Developer', colors: ['#ff6b9d', '#c06c84'], video: YT('PiItKySEFdc'),
       short: '2D zombie survival with special powers, multiple maps, bosses and unlockable characters.',
       desc: ['A 2D zombie survival game featuring multiple zombies, special powers, multiple maps, and characters with unique abilities. Battle through levels, defeat bosses, unlock characters with coins, and use earned rewards strategically.'],
       links: [['📱 View app on Playstore', 'https://play.google.com/store/apps/details?id=com.nsdtech.zombiezone']] },
-    { emoji: '🧟‍♂️', title: 'Fight For Survive by Unity', role: 'Game Developer', colors: ['#11998e', '#38ef7d'], video: YT('khuKnH0-XU0'),
+    { emoji: '🧟‍♂️', kind: 'game', title: 'Fight For Survive by Unity', role: 'Game Developer', colors: ['#11998e', '#38ef7d'], video: YT('khuKnH0-XU0'),
       short: 'Multiplayer zombie survival (Photon PUN 2 + PlayFab): team up, beat the boss, compete.',
       desc: ['Developed a multiplayer zombie survival web game using Unity, Photon PUN 2, and PlayFab. Players can team up in real-time, survive zombie waves, defeat a powerful boss, earn rewards, and compete on individual kill counts. The project features synchronized multiplayer gameplay, weapon switching, AI enemies, player progression, and persistent cloud data.'],
       links: [['🎮 Play on itch.io', 'https://noushad970.itch.io/fight-for-survive'], ['💻 View Source on GitHub', 'https://lnkd.in/gs3H-zh9']],
       note: 'Note: 2D/3D models not included in the repository due to their large size.' },
-    { emoji: '👥', title: 'Employee Management System', role: 'Desktop App Developer', colors: ['#667eea', '#764ba2'], video: YT('-KwJYUODTMo'),
+    { emoji: '🏙️', kind: 'game', title: 'Capital Kingdom by Unity', role: 'Game Developer', colors: ['#f7971e', '#ffd200'], video: YT('KpFO7Jq0ptg'),
+      short: 'Global Game Jam city tycoon simulator: run a capital city district by district, day and night.',
+      desc: ['A top-down city tycoon simulator built in Unity for the Global Game Jam under the Zoud GameLab team. Players run a capital city one district at a time, balancing the city budget and their own health while a day/night clock advances and city occurrences break out across the map.', 'The districts are filled with working locations - a municipal park, industrial manufacturing plants, oil and petroleum stations, a stadium and a school depot - each tied into the city economy, and the whole interface can be switched between English and Arabic.'],
+      links: [['🎮 Play on itch.io', 'https://noushad970.itch.io/capital-kingdom'], ['💻 View Source on GitHub', 'https://github.com/noushad970/-Zoud-GameLab-Global-Game-Jam-Capital-Kingdom']] },
+    { emoji: '👥', kind: 'app', title: 'Employee Management System', role: 'Desktop App Developer', colors: ['#667eea', '#764ba2'], video: YT('-KwJYUODTMo'),
       short: '.NET desktop app with SQL Server: attendance, schedules, departments and leave requests.',
       desc: ['A comprehensive .NET desktop application with SQL Server integration featuring: Admin/Employee login, multi-company support, user profiles, scheduling, attendance tracking, notice systems, department management, and leave request handling.'], links: [] },
-    { emoji: '📍', title: 'Smart Attendance System', role: 'Android App Developer', colors: ['#f6d365', '#fda085'], video: YT('WOHOzqiQNRE'),
+    { emoji: '📍', kind: 'app', title: 'Smart Attendance System', role: 'Android App Developer', colors: ['#f6d365', '#fda085'], video: YT('WOHOzqiQNRE'),
       short: 'Flutter attendance app with live location checks, device auth and fraud detection.',
       desc: ['A Flutter-based university attendance management system with real-time location verification, device authentication, fraud detection, and comprehensive analytics for Admins, Class Representatives, and Students.'],
       links: [['📱 View app on Playstore', 'https://play.google.com/store/apps/details?id=com.nsdtechnologies.attendancetoday']] },
-    { emoji: '🚁', title: 'Drone Simulation by Flutter', role: 'Flutter App Developer', colors: ['#2193b0', '#6dd5ed'], video: YT('qphcCw2_zfc'),
+    { emoji: '🚁', kind: 'app', title: 'Drone Simulation by Flutter', role: 'Flutter App Developer', colors: ['#2193b0', '#6dd5ed'], video: YT('qphcCw2_zfc'),
       short: 'Offline drone-delivery simulation: animated flights, battery, cost and stats dashboard.',
       desc: ['A fully offline simulation of a modern drone logistics system, demonstrating how commercial drone deliveries could work through an interactive and animated user experience.'],
       features: ['🎨 Modern dashboard UI with dark theme and smooth animations', '🗺️ Custom city map with interactive delivery locations', '🚁 Animated drone simulation (takeoff, flight, delivery, return)', '📦 Package selection (Food, Medicine, Parcel, Documents)', '🔋 Battery monitoring and delivery progress tracking', '💰 Delivery cost and time calculation', '📊 Statistics dashboard with charts', '💾 Fully offline using local storage (SharedPreferences)', '🧩 Built with clean architecture and Riverpod'],
       stack: 'Flutter • Dart • Riverpod • SharedPreferences • fl_chart',
       links: [['💻 View Source on GitHub', 'https://lnkd.in/gZ9Rm_ed']] },
+    { emoji: '🌾', kind: 'app', title: 'Smart Agri BD', role: 'Android App Developer', colors: ['#56ab2f', '#a8e063'], video: YT('JoBkNyLLcwo'),
+      short: 'Farming assistant for Bangladesh: crops, livestock, fish ponds, weather and an AI chat.',
+      desc: ['A farming management app for farmers in Bangladesh, published on Google Play under NSD Technology. It brings crop, livestock and fish farming together in one place, with district-level weather and practical advice alongside each.'],
+      features: ['🌱 Daily AI crop advice, growth-stage tracking and pest detection', '🐄 Livestock feeding and yield logs with vaccination schedules', '🐟 Pond monitoring, feeding reminders and water quality management', '🌦️ District-level weather forecasts with farming tips', '💬 24/7 AI farming assistant answering in Bangla or English', '📴 Works offline, storing data locally and syncing automatically'],
+      links: [['📱 View app on Playstore', 'https://play.google.com/store/apps/details?id=com.nsdtechnology.smartagribd']] },
 ];
 
 const EDUCATION = [
@@ -299,37 +308,57 @@ function fail(reason, err) {
         return m;
     });
 
-    /* ---------- station 3: projects ring ---------- */
+    /* ---------- station 3: projects – two rings (games | apps) ---------- */
     const projectsG = new THREE.Group(); scene.add(projectsG);
-    const ring = new THREE.Group(); projectsG.add(ring);
-    const STEP = (Math.PI * 2) / PROJECTS.length, RADIUS = 7;
-    const projCards = PROJECTS.map((p, i) => {
-        const tex = canvasTex(640, 800, (ctx, w, h) => {
-            const g = cardBase(ctx, w, h, p.colors);
-            ctx.textBaseline = 'alphabetic'; ctx.textAlign = 'left';
-            ctx.font = F('400', 92); ctx.fillStyle = '#fff'; ctx.fillText(p.emoji, 44, 150);
-            ctx.font = F('600', 24); ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.textAlign = 'right';
-            ctx.fillText(`${String(i + 1).padStart(2, '0')} / ${PROJECTS.length}`, w - 44, 70); ctx.textAlign = 'left';
-            ctx.font = F('700', 46); ctx.fillStyle = g;
-            let y = wrap(ctx, p.title, 44, 262, w - 88, 56, 3);
-            ctx.font = F('600', 27); ctx.fillStyle = p.colors[0]; y = wrap(ctx, p.role, 44, y + 10, w - 88, 34, 1);
-            ctx.font = F('400', 28); ctx.fillStyle = 'rgba(255,255,255,.8)';
-            wrap(ctx, p.short, 44, y + 28, w - 88, 38, 6);
-            ctx.font = F('700', 26); ctx.fillStyle = '#f1c40f'; ctx.fillText('▶  Click to open', 44, h - 44);
+    const GAMES = PROJECTS.map((p, i) => ({ p, i })).filter(x => x.p.kind === 'game');
+    const APPS  = PROJECTS.map((p, i) => ({ p, i })).filter(x => x.p.kind === 'app');
+
+    function buildRing(list, xOff, ringColor) {
+        const rg = new THREE.Group(); rg.position.x = xOff; projectsG.add(rg);
+        const ring = new THREE.Group(); rg.add(ring);
+        const R = 4.0, STEP = (Math.PI * 2) / list.length;
+        const cards = list.map(({ p, i }, k) => {
+            const tex = canvasTex(560, 720, (ctx, w, h) => {
+                const g = cardBase(ctx, w, h, p.colors);
+                ctx.textBaseline = 'alphabetic'; ctx.textAlign = 'left';
+                ctx.font = F('400', 80); ctx.fillStyle = '#fff'; ctx.fillText(p.emoji, 36, 130);
+                ctx.font = F('600', 22); ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.textAlign = 'right';
+                ctx.fillText(`${String(k + 1).padStart(2, '0')} / ${list.length}`, w - 36, 60); ctx.textAlign = 'left';
+                ctx.font = F('700', 40); ctx.fillStyle = g;
+                let y = wrap(ctx, p.title, 36, 220, w - 72, 48, 3);
+                ctx.font = F('600', 24); ctx.fillStyle = p.colors[0]; y = wrap(ctx, p.role, 36, y + 8, w - 72, 30, 1);
+                ctx.font = F('400', 25); ctx.fillStyle = 'rgba(255,255,255,.8)';
+                wrap(ctx, p.short, 36, y + 24, w - 72, 33, 5);
+                ctx.font = F('700', 23); ctx.fillStyle = '#f1c40f'; ctx.fillText('▶  Click to open', 36, h - 36);
+            });
+            const m = new THREE.Mesh(new THREE.PlaneGeometry(2.8, 3.5), new THREE.MeshBasicMaterial({ map: tex, transparent: true }));
+            const a = k * STEP;
+            m.position.set(Math.sin(a) * R, 0, Math.cos(a) * R);
+            m.rotation.y = a;
+            m.userData = { kind: 'project', station: 3, root: m, i, k, ring: null };
+            interactives.push(m); ring.add(m);
+            return m;
         });
-        const m = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 4.25), new THREE.MeshBasicMaterial({ map: tex, transparent: true }));
-        const a = i * STEP;
-        m.position.set(Math.sin(a) * RADIUS, 0, Math.cos(a) * RADIUS);
-        m.rotation.y = a;
-        m.userData = { kind: 'project', station: 3, root: m, i };
-        interactives.push(m); ring.add(m);
-        return m;
-    });
-    const floor = new THREE.Mesh(new THREE.TorusGeometry(RADIUS + .3, .04, 8, 160), new THREE.MeshBasicMaterial({ color: 0xf1c40f, transparent: true, opacity: .6 }));
-    floor.rotation.x = Math.PI / 2; floor.position.y = -2.6; projectsG.add(floor);
-    const floor2 = new THREE.Mesh(new THREE.TorusGeometry((RADIUS + .3) * .75, .04, 8, 140), new THREE.MeshBasicMaterial({ color: 0x3498db, transparent: true, opacity: .6 }));
-    floor2.rotation.x = Math.PI / 2; floor2.position.y = -2.6; projectsG.add(floor2);
-    const centerGem = new THREE.Mesh(new THREE.OctahedronGeometry(1.1), new THREE.MeshBasicMaterial({ color: 0xe67e22, wireframe: true }));
+        const flr = new THREE.Mesh(
+            new THREE.TorusGeometry(R + .25, .04, 8, 120),
+            new THREE.MeshBasicMaterial({ color: ringColor, transparent: true, opacity: .6 }));
+        flr.rotation.x = Math.PI / 2; flr.position.y = -2.2; rg.add(flr);
+        const lTex = canvasTex(320, 80, (ctx, w, h) => {
+            ctx.font = F('700', 50); ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+            ctx.fillText(list[0].p.kind === 'game' ? '🎮 Games' : '📱 Apps', w / 2, h / 2);
+        });
+        const lMesh = new THREE.Mesh(
+            new THREE.PlaneGeometry(3.2, .8),
+            new THREE.MeshBasicMaterial({ map: lTex, transparent: true, depthWrite: false }));
+        lMesh.position.set(0, R + .7, 0); rg.add(lMesh);
+        const state = { rg, ring, cards, list, step: STEP, R, flr, rot: 0, target: 0, vel: 0, index: 0 };
+        cards.forEach(m => { m.userData.ring = state; });
+        return state;
+    }
+
+    const ringGame = buildRing(GAMES, -5.5, 0xf1c40f);
+    const ringApp  = buildRing(APPS,   5.5, 0x3498db);
+    const centerGem = new THREE.Mesh(new THREE.OctahedronGeometry(0.9), new THREE.MeshBasicMaterial({ color: 0xe67e22, wireframe: true }));
     projectsG.add(centerGem);
 
     /* ---------- station 4: education ---------- */
@@ -436,7 +465,7 @@ function fail(reason, err) {
 
         // 3 projects: rocket at the centre of the ring
         if (M.rocket) centerGem.visible = false;
-        addProp(M.rocket, projectsG, { pos: [0, 3.6, 0], scale: 1.3, spin: .45, bob: .26, bobSpeed: .7, fullSpin: true });
+        addProp(M.rocket, projectsG, { pos: [0, 2.6, 0], scale: 1.0, spin: .45, bob: .22, bobSpeed: .7, fullSpin: true });
 
         // 4 education: cap above the middle frame, books off to the side
         eduProps.cap = addProp(M.gradcap, eduG, { scale: .72, spin: .3, bob: .2, sway: .2 });
@@ -508,17 +537,21 @@ function fail(reason, err) {
     const pointer = { nx: 0, ny: 0, mx: 0, my: 0, down: false, dragging: false, startX: 0, lastX: 0 };
     const raycaster = new THREE.Raycaster();
     let hovered = null, active = 0;
-    let ringRot = 0, ringTarget = 0, ringVel = 0, projIndex = 0;
+    let activeRing = null, dragRing = null; // set after rings built
 
-    const setProj = i => {
-        projIndex = ((i % PROJECTS.length) + PROJECTS.length) % PROJECTS.length;
-        $('#projTitle').textContent = `${PROJECTS[projIndex].emoji} ${PROJECTS[projIndex].title}`;
-        $('#projCount').textContent = `${projIndex + 1} / ${PROJECTS.length}`;
-    };
-    setProj(0);
-    const goProj = d => { ringTarget = Math.round(ringTarget / STEP) * STEP - d * STEP; };
-    $('#prevProj').addEventListener('click', () => goProj(-1));
-    $('#nextProj').addEventListener('click', () => goProj(1));
+    function setRingTitle(state) {
+        const isGame = state.list[0].p.kind === 'game';
+        const { p } = state.list[state.index];
+        $(isGame ? '#gameTitle' : '#appTitle').textContent = `${p.emoji} ${p.title}`;
+        $(isGame ? '#gameCount' : '#appCount').textContent = `${state.index + 1} / ${state.list.length}`;
+    }
+    function goRing(state, d) { state.target = Math.round(state.target / state.step) * state.step - d * state.step; }
+    activeRing = ringGame;
+    setRingTitle(ringGame); setRingTitle(ringApp);
+    $('#prevGame').addEventListener('click', () => { activeRing = ringGame; goRing(ringGame, -1); });
+    $('#nextGame').addEventListener('click', () => { activeRing = ringGame; goRing(ringGame,  1); });
+    $('#prevApp').addEventListener('click',  () => { activeRing = ringApp;  goRing(ringApp,  -1); });
+    $('#nextApp').addEventListener('click',  () => { activeRing = ringApp;  goRing(ringApp,   1); });
 
     // skill popup
     const popup = $('#skillPopup'), popImg = popup.querySelector('img'), popLabel = popup.querySelector('span');
@@ -561,8 +594,8 @@ function fail(reason, err) {
     addEventListener('keydown', e => {
         if (!modal.hidden) { if (e.key === 'Escape') closeModal(); return; }
         if (active === 3 && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
-            if (e.key === 'ArrowRight') goProj(1);
-            if (e.key === 'ArrowLeft') goProj(-1);
+            if (e.key === 'ArrowRight') goRing(activeRing, 1);
+            if (e.key === 'ArrowLeft')  goRing(activeRing, -1);
         }
     });
 
@@ -582,12 +615,15 @@ function fail(reason, err) {
         if (pointer.down && active === 3) {
             const dx = e.clientX - pointer.lastX; pointer.lastX = e.clientX;
             if (Math.abs(e.clientX - pointer.startX) > 6) pointer.dragging = true;
-            if (pointer.dragging) { ringRot += dx * .006; ringTarget = ringRot; ringVel = dx * .006; }
+            if (pointer.dragging) {
+                if (!dragRing) { dragRing = hovered?.userData?.ring || (pointer.nx < 0 ? ringGame : ringApp); activeRing = dragRing; }
+                dragRing.rot += dx * .007; dragRing.target = dragRing.rot; dragRing.vel = dx * .007;
+            }
         }
     });
     canvas.addEventListener('pointerdown', e => {
         updateNdc(e);
-        pointer.down = true; pointer.dragging = false; pointer.startX = pointer.lastX = e.clientX;
+        pointer.down = true; pointer.dragging = false; dragRing = null; pointer.startX = pointer.lastX = e.clientX;
         hovered = pick();
     });
     addEventListener('pointerup', e => {
@@ -595,7 +631,7 @@ function fail(reason, err) {
         pointer.down = false;
         if (pointer.dragging) {
             pointer.dragging = false;
-            ringTarget = Math.round((ringRot + ringVel * 10) / STEP) * STEP; // fling, then snap to a card
+            activeRing.target = Math.round((activeRing.rot + activeRing.vel * 10) / activeRing.step) * activeRing.step;
             return;
         }
         updateNdc(e);
@@ -699,17 +735,19 @@ function fail(reason, err) {
             m.scale.setScalar(m.scale.x + ((h ? 1.07 : 1) - m.scale.x) * .15);
         });
 
-        // projects ring
-        ringVel *= .9;
-        if (!pointer.dragging) ringRot += (ringTarget - ringRot) * .09;
-        ring.rotation.y = ringRot;
-        const near = ((Math.round(-ringRot / STEP) % PROJECTS.length) + PROJECTS.length) % PROJECTS.length;
-        if (near !== projIndex) setProj(near);
-        projCards.forEach(m => {
-            const s = hovered === m ? 1.08 : (m.userData.i === near ? 1.03 : 1);
-            m.scale.setScalar(m.scale.x + (s - m.scale.x) * .15);
+        // projects rings (game + app)
+        [ringGame, ringApp].forEach(state => {
+            state.vel *= .9;
+            if (!pointer.dragging || activeRing !== state) state.rot += (state.target - state.rot) * .09;
+            state.ring.rotation.y = state.rot;
+            const near = ((Math.round(-state.rot / state.step) % state.list.length) + state.list.length) % state.list.length;
+            if (near !== state.index) { state.index = near; setRingTitle(state); }
+            state.cards.forEach(m => {
+                const sc = hovered === m ? 1.08 : (m.userData.k === near ? 1.03 : 1);
+                m.scale.setScalar(m.scale.x + (sc - m.scale.x) * .15);
+            });
+            state.flr.rotation.z += (state === ringGame ? 1 : -1) * .003 * sp;
         });
-        floor.rotation.z = t * .2 * sp; floor2.rotation.z = -t * .3 * sp;
         centerGem.rotation.y = t * .6 * sp; centerGem.rotation.x = t * .35 * sp;
 
         // education
