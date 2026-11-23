@@ -1,165 +1,153 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./styles/services.css">
-    <link rel="stylesheet" href="./styles/project.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
+    <title>Noushad Bhuiyan | 3D Portfolio</title>
+    <meta name="description" content="Interactive 3D portfolio of Noushad Bhuiyan: Unity game developer, Flutter and full stack web developer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="styles/world.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () { if (window.emailjs) emailjs.init({ publicKey: "rl_-Q0FjZQGr2XzyV" }); })();
+    </script>
 </head>
 <body>
-    <header>
-        
-        <div class="logo">
-            <div class="profile-container">
-                <img src="./images/default-image.png" alt="Profile Picture" class="profile-picture" id="profilePicture">
-                <!-- <img src="./images/edit-icon.png" alt="Edit Icon" class="edit-icon">
-                <input type="file" id="imageInput" accept="image/*" style="display: none;"> -->
-            </div>
-            <h1>Noushad's Portfolio</h1>
+    <canvas id="world" aria-hidden="true"></canvas>
 
-        </div>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav id="mainNav">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="./pages/services.html">Services</a></li>
-                <li><a href="./pages/project.html">Projects</a></li>
-                <li><a href="./pages/about.html">Education</a></li>
-                <li><a href="./pages/contact.html">Contact Me</a></li>
-            </ul>
+    <div id="loader"><div class="loader-ring"></div><p>Loading 3D world…</p></div>
+
+    <div id="fallback" role="alert">
+        <h2>The 3D view couldn't start</h2>
+        <p>Your browser or network blocked WebGL / Three.js. You can still browse the classic version.</p>
+        <a class="btn" href="index-classic.html">Open classic portfolio</a>
+    </div>
+
+    <header id="topbar">
+        <button class="logo" data-go="0" aria-label="Go to start">Noushad's Portfolio</button>
+        <nav id="nav" aria-label="Sections">
+            <button data-go="0">Home</button>
+            <button data-go="1">Skills</button>
+            <button data-go="2">Services</button>
+            <button data-go="3">Projects</button>
+            <button data-go="4">Education</button>
+            <button data-go="5">Contact</button>
         </nav>
     </header>
-    <!-- Social media section -->
-    <div class="social-media">
-        <a href="https://www.facebook.com/mdamir.khan.7587370" target="_blank">
-            <img src="images/fb.png" alt="Facebook" class="social-icon">
-        </a>
-        <a href="https://x.com/bhuiyan_noushad?t=mPYMLCZPSE2bzzD5JluKeQ&s=09" target="_blank">
-            <img src="images/twitter.png" alt="Twitter" class="social-icon">
-        </a>
-        <a href="https://www.upwork.com/freelancers/~0193bcc1ac56d08c40" target="_blank">
-            <img src="images/upwork.png" alt="Instagram" class="social-icon">
-        </a>
-        <a href="https://www.linkedin.com/in/md-noushad-a966a8278/" target="_blank">
-            <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
-        </a>
-        <a href="https://github.com/noushad970" target="_blank">
-            <img src="images/git.png" alt="GitHub" class="social-icon">
-        </a>
-    </div>
-    <!-- Profile picture with skill section -->
-    <main class="main-section">
-        <div class="content-containerMain">
-            <!-- Left Side: Picture -->
-            <div class="left-side">
-                <img src="./images/my-photo.jpg" alt="Profile Picture" class="profile-pictureMain">
+
+    <div id="dots" aria-hidden="true"></div>
+
+    <!-- 0: HOME -->
+    <section class="panel" id="panel-0" aria-label="Home">
+        <div class="hero-copy ui">
+            <h4>Hello! 👋</h4>
+            <h1>I'm <span class="accent">Noushad</span><br><span class="accent2">Bhuiyan</span></h1>
+            <h3>🎮 Frontend &amp; Backend App &amp; Game Developer</h3>
+            <p class="lede">Unity games, Flutter apps and full stack web: built end to end, from UI to cloud.</p>
+            <div class="cta">
+                <button class="btn" data-go="3">View my projects</button>
+                <button class="btn ghost" data-go="5">Contact me</button>
             </div>
-        
-            <!-- Right Side: About Me and Skills -->
-            <div class="right-side">
-                <h4 style="color:white; animation: fadeInUp 0.6s ease-out;">Hello! 👋</h4>
-                <h1 style="color:white; animation: fadeInUp 0.8s ease-out 0.1s backwards;"> I'm <strong style="color:rgb(255, 208, 0)">Noushad</strong></h1>
-                <h1 style="color:rgb(255, 208, 0); animation: fadeInUp 0.8s ease-out 0.2s backwards;"><strong>Bhuiyan</strong></h1>
-                
-                <h3 style="color:white; animation: fadeInUp 0.8s ease-out 0.3s backwards;"><br>🎮 Frontend & Backend App<br>& Game Developer</h3>
-                
-                <h3 style="color:white; animation: fadeInUp 0.8s ease-out 0.4s backwards;"><br>💻 Skills:</h3>
-                <div class="skills-container">
-                   
-                <ul class="skills-list">
-                    <li data-gif="./images/coding.gif">
-                        <img src="./images/c++.gif" alt="CPP Logo" class="skill-logo">
-                        C++
-                    </li>
-                    <li data-gif="./images/API.gif">
-                        <img src="./images/csLogo.gif" alt="CS Logo" class="skill-logo">
-                        C#
-                    </li>
-                    <li data-gif="./images/Fullstack.gif">
-                        <img src="./images/jslogo.webp" alt="JavaScript Logo" class="skill-logo">
-                        JavaScript
-                    </li>
-                    <li data-gif="./images/nodejs anim.gif">
-                        <img src="./images/nodejs.png" alt="nodejs Logo" class="skill-logo">
-                        Node JS
-                    </li>
-                    <li data-gif="./images/game.gif">
-                        <img src="./images/unity.gif" alt="Unity Logo" class="skill-logo">
-                        Unity
-                    </li>
-                    <li data-gif="./images/Java-animation.gif">
-                        <img src="./images/java-logo.gif" alt="JAVA Logo" class="skill-logo">
-                        Java
-                    </li>
-                    
-                    
-                </ul>
+            <div class="socials">
+                <a href="https://www.facebook.com/mdamir.khan.7587370" target="_blank" rel="noopener"><img src="images/fb.png" alt="Facebook"></a>
+                <a href="https://x.com/bhuiyan_noushad?t=mPYMLCZPSE2bzzD5JluKeQ&s=09" target="_blank" rel="noopener"><img src="images/twitter.png" alt="Twitter / X"></a>
+                <a href="https://www.upwork.com/freelancers/~0193bcc1ac56d08c40" target="_blank" rel="noopener"><img src="images/upwork.png" alt="Upwork"></a>
+                <a href="https://www.linkedin.com/in/md-noushad-a966a8278/" target="_blank" rel="noopener"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/noushad970" target="_blank" rel="noopener"><img src="images/git.png" alt="GitHub"></a>
             </div>
-                <!-- Popup GIF Container -->
-                <div class="popup-container" id="popupContainer">
-                    <img src="" alt="Skill Animation" id="popupImage" />
+        </div>
+        <div class="scroll-hint">Scroll to explore <span class="mouse"><i></i></span></div>
+    </section>
+
+    <!-- 1: SKILLS -->
+    <section class="panel" id="panel-1" aria-label="Skills">
+        <div class="panel-head"><h2>💻 Skills</h2><p>Hover or tap a badge to see it in action</p></div>
+        <ul class="sr-only"><li>C++</li><li>C#</li><li>JavaScript</li><li>Node JS</li><li>Unity</li><li>Java</li></ul>
+    </section>
+
+    <!-- 2: SERVICES -->
+    <section class="panel" id="panel-2" aria-label="Services">
+        <div class="panel-head"><h2>🚀 My Services</h2><p>Move your mouse over the cards</p></div>
+        <div class="sr-only">
+            <h3>Unity Game Development</h3><p>Front-end design, back-end game mechanics, ads integration, cloud save, authentication, in-app purchases, multiplayer mode.</p>
+            <h3>Flutter App Development</h3><p>Front-end design, Firebase and MongoDB back-end, ads, cloud save, authentication, in-app purchases, API integration, JSON, Dart, Python.</p>
+            <h3>ML/DL Model Development</h3><p>In-app integration, AI app development, agent development, Python and Jupyter Notebooks.</p>
+            <h3>Full Stack Web Development</h3><p>CSS, HTML and JavaScript, database connection, Node.js, front-end and back-end integration.</p>
+        </div>
+    </section>
+
+    <!-- 3: PROJECTS -->
+    <section class="panel" id="panel-3" aria-label="Projects">
+        <div class="panel-head"><h2>🎮 Projects</h2><p>Drag to spin the ring · click a card to open it</p></div>
+        <div class="proj-controls ui">
+            <button class="round" id="prevProj" aria-label="Previous project">‹</button>
+            <div class="proj-meta"><strong id="projTitle">…</strong><span id="projCount"></span></div>
+            <button class="round" id="nextProj" aria-label="Next project">›</button>
+        </div>
+    </section>
+
+    <!-- 4: EDUCATION -->
+    <section class="panel" id="panel-4" aria-label="Education">
+        <div class="panel-head"><h2>📚 My Educational Journey</h2><p>Click a frame to visit the institution</p></div>
+        <div class="sr-only">
+            <p>Chaitanya M.L. High School: SSC GPA 5 out of 5, graduated 2019.</p>
+            <p>Dr. Mahbubur Rahman Mollah College: HSC GPA 5 out of 5, graduated 2021.</p>
+            <p>Patuakhali Science and Technology University: enrolled 2023, current CGPA 3.20 out of 4.</p>
+        </div>
+    </section>
+
+    <!-- 5: CONTACT -->
+    <section class="panel" id="panel-5" aria-label="Contact">
+        <div class="contact-card ui">
+            <h2>💬 Get In Touch</h2>
+            <p class="sub">Feel free to reach out! I'll get back to you as soon as possible.</p>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" id="nameInput" required>
+                <input type="email" name="email" placeholder="Your Email" id="emailInput" required>
+                <textarea name="message" placeholder="Your Message" id="messageInput" rows="4" required></textarea>
+                <button type="button" id="sendButton" class="btn">Send Message 📨</button>
+            </form>
+            <button id="composeMailButton" class="btn ghost">📧 Compose Mail</button>
+            <div class="hire">
+                <p>💼 Hire me on freelance platforms</p>
+                <div class="cta">
+                    <a class="btn small" target="_blank" rel="noopener" href="https://www.peopleperhour.com/freelancer/technology-programming/md_noushad-bhuiyan-game-and-app-developer-zzvnzvnj">PeoplePerHour</a>
+                    <a class="btn small" target="_blank" rel="noopener" href="https://www.upwork.com/freelancers/~0193bcc1ac56d08c40">Upwork</a>
                 </div>
             </div>
         </div>
-        
-    <script src="./scripts/services.js"></script>
-        <br>
-        <h1 style="color: white; text-align: center; animation: fadeInUp 0.8s ease-out;">🚀 My Services:</h1>
-        <section class="service-section">
-            <div class="content">
-                <h2 class="service-header">🎮 Unity Game Development</h2>
-                <p>I provide complete Unity game development services including:</p>
-                <ul>
-                    <li>Front-end design</li>
-                    <li>Back-end game mechanics</li>
-                    <li>Ads integration</li>
-                    <li>Cloud save</li>
-                    <li>Authentication</li>
-                    <li>In-app purchases (IAP)</li>
-                    <li>Multiplayer mode</li>
-                </ul>
-            </div>
-        </section>
+    </section>
 
-        <section class="service-section">
-            <div class="content">
-                <h2 class="service-header">💻 Full Stack Web Development</h2>
-                <p>I offer full-stack web development services including:</p>
-                <ul>
-                    <li>CSS, HTML, and JavaScript</li>
-                    <li>Database connection</li>
-                    <li>Node.js</li>
-                    <li>Front-end and back-end integration</li>
-                </ul>
-            </div>
-        </section>
+    <!-- Skill popup -->
+    <div id="skillPopup" aria-hidden="true"><img alt=""><span></span></div>
 
-        <!-- Fiverr and Upwork Section -->
-        <section class="profile-section">
-            <h2 style="color:rgb(0, 0, 0)">💼 Hire Me on Freelance Platforms</h2>
-            <p style="color:rgb(0, 0, 0)">Check out my PeoplePerHour and Upwork profiles to hire me for your projects:</p>
-            <div class="profile-links">
-                <a href="https://www.peopleperhour.com/freelancer/technology-programming/md_noushad-bhuiyan-game-and-app-developer-zzvnzvnj" target="_blank" class="profile-link fiverr">PeoplePerHour Profile</a>
-                <a href="https://www.upwork.com/freelancers/~0193bcc1ac56d08c40" target="_blank" class="profile-link upwork">Upwork Profile</a>
+    <!-- Project modal -->
+    <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+        <div class="modal-box">
+            <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+            <div class="video"><iframe id="modalVideo" title="Project video" allowfullscreen loading="lazy"></iframe></div>
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <p class="role" id="modalRole"></p>
+                <div id="modalDesc"></div>
+                <div id="modalLinks" class="cta"></div>
             </div>
-            
-        </section>
-        
-        
-    </main>
-    
-    <canvas id="backgroundCanvas"></canvas>
-    <script src="script.js">
-        
-    </script>
-   
+        </div>
+    </div>
+
+    <div id="scroll-space"></div>
+
+    <script src="scripts/contact.js"></script>
+    <script type="module" src="scripts/world.js"></script>
 </body>
 </html>

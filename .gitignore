@@ -1,0 +1,8 @@
+# Blender / preview scratch output
+models/preview/
+models/_report.txt
+models/_server.txt
+
+# OS
+Thumbs.db
+.DS_Store

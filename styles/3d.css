@@ -1,0 +1,59 @@
+/* 3D layer: perspective, glass panels, depth */
+main, .main-section, .about-container, .contact-container {
+    perspective: 1400px;
+}
+
+.tilt-3d {
+    transition: rotate 0.25s ease-out;
+    will-change: rotate;
+    backface-visibility: hidden;
+}
+
+/* Frosted-glass panels so the 3D scene shows through */
+.service-section, .education-section, .profile-section, .profile-section1, .project-section {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* Profile picture: orbiting 3D rings */
+.left-side {
+    position: relative;
+    transform-style: preserve-3d;
+}
+.left-side::before,
+.left-side::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    border-radius: 50%;
+    pointer-events: none;
+    border: 2px solid rgba(241, 196, 15, 0.7);
+    box-shadow: 0 0 18px rgba(241, 196, 15, 0.5);
+}
+.left-side::before {
+    width: 440px; height: 440px;
+    margin: -220px 0 0 -220px;
+    animation: orbitA 9s linear infinite;
+}
+.left-side::after {
+    width: 500px; height: 500px;
+    margin: -250px 0 0 -250px;
+    border-color: rgba(52, 152, 219, 0.7);
+    box-shadow: 0 0 18px rgba(52, 152, 219, 0.5);
+    animation: orbitB 13s linear infinite;
+}
+@keyframes orbitA {
+    from { transform: rotateX(70deg) rotateZ(0deg); }
+    to   { transform: rotateX(70deg) rotateZ(360deg); }
+}
+@keyframes orbitB {
+    from { transform: rotateY(70deg) rotateZ(360deg); }
+    to   { transform: rotateY(70deg) rotateZ(0deg); }
+}
+
+@media (max-width: 768px) {
+    .left-side::before, .left-side::after { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .left-side::before, .left-side::after { animation: none; }
+}

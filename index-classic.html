@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/services.css">
+    <link rel="stylesheet" href="./styles/project.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="styles/3d.css">
+</head>
+<body>
+    <header>
+        
+        <div class="logo">
+            <div class="profile-container">
+                <img src="./images/default-image.png" alt="Profile Picture" class="profile-picture" id="profilePicture">
+                <!-- <img src="./images/edit-icon.png" alt="Edit Icon" class="edit-icon">
+                <input type="file" id="imageInput" accept="image/*" style="display: none;"> -->
+            </div>
+            <h1>Noushad's Portfolio</h1>
+
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./pages/services.html">Services</a></li>
+                <li><a href="./pages/project.html">Projects</a></li>
+                <li><a href="./pages/about.html">Education</a></li>
+                <li><a href="./pages/contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Social media section -->
+    <div class="social-media">
+        <a href="https://www.facebook.com/mdamir.khan.7587370" target="_blank">
+            <img src="images/fb.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://x.com/bhuiyan_noushad?t=mPYMLCZPSE2bzzD5JluKeQ&s=09" target="_blank">
+            <img src="images/twitter.png" alt="Twitter" class="social-icon">
+        </a>
+        <a href="https://www.upwork.com/freelancers/~0193bcc1ac56d08c40" target="_blank">
+            <img src="images/upwork.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/md-noushad-a966a8278/" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://github.com/noushad970" target="_blank">
+            <img src="images/git.png" alt="GitHub" class="social-icon">
+        </a>
+    </div>
+    <!-- Profile picture with skill section -->
+    <main class="main-section">
+        <div class="content-containerMain">
+            <!-- Left Side: Picture -->
+            <div class="left-side">
+                <img src="./images/my-photo.jpg" alt="Profile Picture" class="profile-pictureMain">
+            </div>
+        
+            <!-- Right Side: About Me and Skills -->
+            <div class="right-side">
+                <h4 style="color:white; animation: fadeInUp 0.6s ease-out;">Hello! 👋</h4>
+                <h1 style="color:white; animation: fadeInUp 0.8s ease-out 0.1s backwards;"> I'm <strong style="color:rgb(255, 208, 0)">Noushad</strong></h1>
+                <h1 style="color:rgb(255, 208, 0); animation: fadeInUp 0.8s ease-out 0.2s backwards;"><strong>Bhuiyan</strong></h1>
+                
+                <h3 style="color:white; animation: fadeInUp 0.8s ease-out 0.3s backwards;"><br>🎮 Frontend & Backend App<br>& Game Developer</h3>
+                
+                <h3 style="color:white; animation: fadeInUp 0.8s ease-out 0.4s backwards;"><br>💻 Skills:</h3>
+                <div class="skills-container">
+                   
+                <ul class="skills-list">
+                    <li data-gif="./images/coding.gif">
+                        <img src="./images/c++.gif" alt="CPP Logo" class="skill-logo">
+                        C++
+                    </li>
+                    <li data-gif="./images/API.gif">
+                        <img src="./images/csLogo.gif" alt="CS Logo" class="skill-logo">
+                        C#
+                    </li>
+                    <li data-gif="./images/Fullstack.gif">
+                        <img src="./images/jslogo.webp" alt="JavaScript Logo" class="skill-logo">
+                        JavaScript
+                    </li>
+                    <li data-gif="./images/nodejs anim.gif">
+                        <img src="./images/nodejs.png" alt="nodejs Logo" class="skill-logo">
+                        Node JS
+                    </li>
+                    <li data-gif="./images/game.gif">
+                        <img src="./images/unity.gif" alt="Unity Logo" class="skill-logo">
+                        Unity
+                    </li>
+                    <li data-gif="./images/Java-animation.gif">
+                        <img src="./images/java-logo.gif" alt="JAVA Logo" class="skill-logo">
+                        Java
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+                <!-- Popup GIF Container -->
+                <div class="popup-container" id="popupContainer">
+                    <img src="" alt="Skill Animation" id="popupImage" />
+                </div>
+            </div>
+        </div>
+        
+    <script src="./scripts/services.js"></script>
+        <br>
+        <h1 style="color: white; text-align: center; animation: fadeInUp 0.8s ease-out;">🚀 My Services:</h1>
+        <section class="service-section">
+            <div class="content">
+                <h2 class="service-header">🎮 Unity Game Development</h2>
+                <p>I provide complete Unity game development services including:</p>
+                <ul>
+                    <li>Front-end design</li>
+                    <li>Back-end game mechanics</li>
+                    <li>Ads integration</li>
+                    <li>Cloud save</li>
+                    <li>Authentication</li>
+                    <li>In-app purchases (IAP)</li>
+                    <li>Multiplayer mode</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="service-section">
+            <div class="content">
+                <h2 class="service-header">💻 Full Stack Web Development</h2>
+                <p>I offer full-stack web development services including:</p>
+                <ul>
+                    <li>CSS, HTML, and JavaScript</li>
+                    <li>Database connection</li>
+                    <li>Node.js</li>
+                    <li>Front-end and back-end integration</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Fiverr and Upwork Section -->
+        <section class="profile-section">
+            <h2 style="color:rgb(0, 0, 0)">💼 Hire Me on Freelance Platforms</h2>
+            <p style="color:rgb(0, 0, 0)">Check out my PeoplePerHour and Upwork profiles to hire me for your projects:</p>
+            <div class="profile-links">
+                <a href="https://www.peopleperhour.com/freelancer/technology-programming/md_noushad-bhuiyan-game-and-app-developer-zzvnzvnj" target="_blank" class="profile-link fiverr">PeoplePerHour Profile</a>
+                <a href="https://www.upwork.com/freelancers/~0193bcc1ac56d08c40" target="_blank" class="profile-link upwork">Upwork Profile</a>
+            </div>
+            
+        </section>
+        
+        
+    </main>
+    
+    <canvas id="backgroundCanvas"></canvas>
+    <script src="script.js">
+        
+    </script>
+   
+    <script type="module" src="scripts/three-scene.js"></script>
+    <script src="scripts/tilt.js"></script>
+</body>
+</html>
