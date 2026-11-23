@@ -146,14 +146,20 @@ body.no-3d #loader { display: none; }
 
 /* projects controls */
 .proj-controls {
-    position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
-    display: flex; align-items: center; gap: 18px;
+    position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: stretch; gap: 12px;
     background: var(--glass); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; max-width: 94vw;
+    border: 1px solid var(--line); border-radius: 20px; padding: 10px 16px; max-width: 94vw;
 }
-.proj-meta { display: flex; flex-direction: column; text-align: center; min-width: 200px; max-width: 46vw; }
-.proj-meta strong { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.proj-meta span { font-size: 12px; color: var(--gold); }
+.ring-ctrl {
+    display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 0;
+}
+.ring-ctrl + .ring-ctrl { border-left: 1px solid var(--line); padding-left: 12px; }
+.ring-label { font-size: 12px; font-weight: 700; letter-spacing: .04em; color: var(--gold); text-transform: uppercase; }
+.ctrl-row { display: flex; align-items: center; gap: 10px; }
+.proj-meta { display: flex; flex-direction: column; text-align: center; min-width: 160px; max-width: 38vw; }
+.proj-meta strong { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.proj-meta span { font-size: 11px; color: var(--gold); }
 .round {
     width: 42px; height: 42px; border-radius: 50%; border: 0; cursor: pointer; flex: none;
     background: linear-gradient(135deg, var(--gold), var(--orange)); color: #111; font: 700 26px/1 'Poppins', sans-serif;
@@ -236,7 +242,9 @@ body.no-3d #loader { display: none; }
     .logo { display: none; }
     #nav { max-width: 100%; }
     #dots { display: none; }
-    .proj-meta { min-width: 120px; }
+    .proj-meta { min-width: 100px; }
+    .proj-controls { gap: 8px; padding: 8px 10px; }
+    .ring-ctrl + .ring-ctrl { padding-left: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
     * { animation-duration: .001s !important; transition-duration: .001s !important; }

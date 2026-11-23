@@ -1,0 +1,12 @@
+blender 5.2.2 LTS
+out C:\Users\abnou\OneDrive\Desktop\my-portfolio-main\models
+OK   controller.glb 62732 bytes, 9 parts
+OK   laptop.glb 8832 bytes, 4 parts
+OK   phone.glb 8104 bytes, 4 parts
+OK   chip.glb 31364 bytes, 4 parts
+OK   crystal.glb 10008 bytes, 2 parts
+OK   rocket.glb 28920 bytes, 6 parts
+OK   gradcap.glb 12412 bytes, 4 parts
+OK   books.glb 11708 bytes, 4 parts
+OK   envelope.glb 12236 bytes, 4 parts
+done

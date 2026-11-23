@@ -1,0 +1,10 @@
+OK   controller.png 178227 bytes, radius 2.02
+OK   laptop.png 175650 bytes, radius 1.70
+OK   phone.png 172510 bytes, radius 0.94
+OK   chip.png 180943 bytes, radius 1.18
+OK   crystal.png 171834 bytes, radius 1.48
+OK   rocket.png 174927 bytes, radius 1.32
+OK   gradcap.png 166192 bytes, radius 1.77
+OK   books.png 185714 bytes, radius 0.96
+OK   envelope.png 180683 bytes, radius 0.94
+done

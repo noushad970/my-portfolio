@@ -103,6 +103,16 @@
     box-shadow: 0 15px 40px rgba(56, 239, 125, 0.4);
 }
 
+.project-section.game-8 {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    color: #fff;
+}
+
+.project-section.game-8:hover {
+    transform: translateY(-10px) rotate(-1deg) scale(1.02);
+    box-shadow: 0 15px 40px rgba(247, 151, 30, 0.4);
+}
+
 /* App Projects */
 .project-section.app-1 {
     background: linear-gradient(135deg, #667eea, #764ba2);
@@ -132,6 +142,16 @@
 .project-section.app-3:hover {
     transform: translateY(-10px) rotate(-1deg) scale(1.02);
     box-shadow: 0 15px 40px rgba(32, 58, 67, 0.6);
+}
+
+.project-section.app-4 {
+    background: linear-gradient(135deg, #1a3a2a, #2d6a4f, #40916c);
+    color: #fff;
+}
+
+.project-section.app-4:hover {
+    transform: translateY(-10px) rotate(1deg) scale(1.02);
+    box-shadow: 0 15px 40px rgba(45, 106, 79, 0.6);
 }
 
 /* Video Container */
@@ -180,9 +200,11 @@
 
 .project-section.game-6 .description h2,
 .project-section.game-7 .description h2,
+.project-section.game-8 .description h2,
 .project-section.app-1 .description h2,
 .project-section.app-2 .description h2,
-.project-section.app-3 .description h2 {
+.project-section.app-3 .description h2,
+.project-section.app-4 .description h2 {
     color: #fff;
 }
 
@@ -211,7 +233,8 @@
 .project-section.game-7 .description a,
 .project-section.app-1 .description a,
 .project-section.app-2 .description a,
-.project-section.app-3 .description a {
+.project-section.app-3 .description a,
+.project-section.app-4 .description a {
     color: #ffe259;
 }
 
